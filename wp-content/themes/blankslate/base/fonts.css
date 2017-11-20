@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/wp-content/themes/blankslate/fonts/circular-book.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "circular-bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/wp-content/themes/blankslate/fonts/circular-bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "circular-black";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/wp-content/themes/blankslate/fonts/circular-black.ttf") format("truetype"); }

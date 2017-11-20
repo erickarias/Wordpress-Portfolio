@@ -1,0 +1,70 @@
+@import 'variables';
+
+body {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 300;
+  letter-spacing: .5px;
+  color: $font-color;
+}
+
+h1, h2, h3 {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+  margin-bottom: $base-spacing/2;
+  color: $purple;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 50px;
+}
+
+h2 {
+  font-size: 50px;
+  line-height: 67px;
+
+  &.line-title {
+    font-size: 20px;
+    border-color: $red;
+    line-height: 20px;
+    display: inline-block;
+    font-weight: 700;
+    margin-bottom: $base-spacing/2;
+    color: $dark-purple;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 31px;  
+  font-weight: 500;
+  margin-bottom: $base-spacing;
+}
+
+p {
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: $base-spacing;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 100ms ease-in-out;
+
+  &:hover {
+    color: $hover;
+    cursor: pointer;
+
+    img {
+      opacity: .7;
+      cursor: pointer;
+    }
+  }
+}
+
+.caption {
+  font-style: italic;
+  text-align: center;
+}

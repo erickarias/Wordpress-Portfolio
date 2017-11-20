@@ -1,0 +1,100 @@
+@import "../bourbon/bourbon";
+@import "../neat/neat";
+@import 'grid_settings';
+@import 'variables';
+
+body.projects {
+  
+  #wrapper {
+    background: white;
+  }
+  
+
+  .section {
+    width: 100%;
+    max-width: none;
+  }
+
+  @include media($medium-screen-up) {
+    h2 {
+      margin-bottom: $base-spacing/2;
+    }
+    
+    .section {
+      padding-top: 80px;
+
+    }
+
+    .block {
+      max-width: 800px;
+      width: 100%;
+      margin-left: $base-spacing*14;
+      margin-right: $base-spacing*24;
+
+
+      &:first-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .block-text {
+      transform: none;
+
+      h2, p {
+        text-align: left;
+      }
+    }
+
+    .project-grid {
+      margin-bottom: 0;
+      width: calc(100% - 320px);
+      margin-left: $base-spacing*14;
+      margin-right: $base-spacing*4;
+      max-width: none;
+
+      .project {
+        margin-bottom: $base-spacing*2;
+        @include span-columns(12);
+
+        &:hover {
+          cursor: pointer;
+          h3 {
+            color: $hover;
+          }
+        }
+
+        img {
+          @include span-columns(5);
+        }
+
+        .block-text {
+          @include span-columns(7);
+        }
+
+        a {
+          margin: 0;
+          display: block;
+        }
+
+        h3 {
+          margin: 0;
+          font-size: 28px;
+          font-weight: 700;
+          line-height: 35px;
+        }
+
+        label {
+          color: $font-color;
+          font-size: 14px;
+          margin-right: $base-spacing;
+        }
+      }
+      // &:nth-child(3) {
+      //   @include shift(6);
+      //   .project {
+      //     @include span-columns(4);
+      //   }
+      // }
+    }
+  }
+}

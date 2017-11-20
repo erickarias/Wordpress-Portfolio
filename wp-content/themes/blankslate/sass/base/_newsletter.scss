@@ -1,0 +1,71 @@
+// .modal {
+	
+// 	&.visible {
+// 		display: block;
+// 	}
+// }
+
+// .curtain {
+// 	content: "";
+// 	position: fixed;
+// 	height: 100%;
+// 	width: 100%;
+// 	background: $font-color;
+// 	opacity: .5;
+// 	top: 0;
+// 	left: 0;
+// 	z-index: 2;
+// }
+
+// .es_shortcode_form {
+// 	background-color: white;
+// 	position: fixed;
+// 	height: 345px;
+// 	width: 600px;
+// 	z-index: 3;
+// 	top: 0;
+// 	bottom: 0;
+// 	right: 0;
+// 	left: 0;
+// 	margin: auto;
+// 	padding: $base-spacing*2 $base-spacing*2;
+
+
+// 	.es_caption {
+// 		font-size: 24px;
+// 		color: $font-color;
+// 		line-height: 31px;
+// 		color: $dark-purple;
+// 		font-weight: 500;
+// 	}
+
+// 	input[type=text] {
+// 		width: 100%;
+// 		font-size: 18px;
+// 		color: darken($font-color, 10%);
+// 		background-color: #EECBE0;
+// 		padding: 0 10px;
+// 	}
+
+// 	.es_button {
+// 		padding: 0;
+// 		margin-top: $base-spacing;
+// 	}
+
+// 	.es_textbox {
+// 		margin-bottom: $base-spacing/2;
+// 	}
+
+// 	.button {
+// 		width: 300px;
+// 		border: none;
+// 		margin: 0 auto;
+// 		display: block;
+// 	}
+
+// 	label {
+// 		color: $font-color;
+// 		display: block;
+// 		margin-bottom: 5px;
+// 	}
+// }

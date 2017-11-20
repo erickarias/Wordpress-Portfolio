@@ -1,0 +1,25 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.about .block {
+  margin-bottom: 20px; }
+
+.about .button-2 {
+  margin-top: 20px; }
+
+@media screen and (min-width: 40em) {
+  .about h2 {
+    margin-bottom: 20px; }
+  .about .block {
+    margin-bottom: 40px; }
+    .about .block a {
+      margin-top: 20px; } }

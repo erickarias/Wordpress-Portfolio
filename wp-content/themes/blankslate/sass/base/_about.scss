@@ -1,0 +1,72 @@
+@import "../bourbon/bourbon";
+@import "../neat/neat";
+@import 'grid_settings';
+@import 'variables';
+
+.about {
+  #wrapper {
+    min-height: 1200px;
+  }
+  .section {
+    @include media($medium-screen-up) {
+      width: calc(100% - 320px);
+      margin-left: $base-spacing*14;
+      margin-right: $base-spacing*2;
+      padding-top: $base-spacing*4;
+    }
+  }
+
+  .half {
+    img {
+      width: 100%;
+    }
+
+    .block-img {
+      @include span-columns(4);
+    }
+
+    &.block {
+      position: relative;
+    }
+
+    .block-text {
+      @include span-columns(7);
+      margin-top: $base-spacing;
+    }
+  }
+  
+  .flip {
+    .block-text {
+      @include shift(0);
+      position: static;
+      @include span-columns(7);
+      margin-top: 0;
+    }
+  }
+  
+
+  .block {
+    margin-bottom: $base-spacing;
+  }
+
+  .button-2 {
+    margin-top: $base-spacing;
+  }
+}
+
+@include media($medium-screen-up) {
+  .about {
+    h2 {
+      margin-bottom: $base-spacing/2;
+    }
+
+    .block {
+      margin-bottom: $base-spacing*2;
+      .block-text {
+        padding-right: $base-spacing*2;
+      }
+      a {
+      }
+    }
+  }
+}

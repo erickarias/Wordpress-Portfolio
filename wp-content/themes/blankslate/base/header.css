@@ -1,0 +1,139 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.button {
+  color: #000;
+  cursor: pointer;
+  display: inline;
+  line-height: 45px;
+  position: relative;
+  text-decoration: none;
+  font-size: 18px;
+  vertical-align: middle;
+  width: 100%;
+  letter-spacing: 2px;
+  text-align: center;
+  border: 3px solid #231f20;
+  transition: all 100ms ease-in-out;
+  text-transform: uppercase; }
+
+@media screen and (min-width: 40em) {
+  .button {
+    border: 0; }
+  .button:after {
+    backface-visibility: hidden;
+    border: 2px solid transparent;
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 50ms ease-in-out;
+    width: 0; }
+  .button:hover:after {
+    backface-visibility: hidden;
+    border-color: #000;
+    transition: width 100ms ease-in-out;
+    width: 100%; }
+  .button:hover:before {
+    bottom: auto;
+    top: 0;
+    width: 100%; } }
+
+.button-2 {
+  padding: 11px 20px 10px;
+  background-color: #231f20;
+  overflow: hidden;
+  transition: all 250ms ease-in-out;
+  position: relative;
+  border: 3px solid #231f20;
+  text-align: center;
+  color: #fff; }
+  @media screen and (min-width: 40em) {
+    .button-2 {
+      color: #231f20; }
+      .button-2 span {
+        position: relative;
+        z-index: 1; }
+      .button-2:before {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300px;
+        height: 300px;
+        margin-left: -150px;
+        margin-top: -150px;
+        content: '';
+        border-color: #fff;
+        border-style: solid;
+        border-width: 150px;
+        border-radius: 150px;
+        transform-origin: center center;
+        transition: all 250ms ease-in-out;
+        box-sizing: border-box; }
+      .button-2:hover {
+        color: #fff; }
+        .button-2:hover:before {
+          border-width: 1px; } }
+
+.button-box {
+  border: 3px solid #231f20;
+  background-color: transparent;
+  font-size: 18px;
+  line-height: 25px;
+  padding: 11px 20px 10px;
+  cursor: pointer;
+  color: #231f20;
+  transition: all 75ms ease-in-out; }
+  .button-box:hover {
+    background-color: #231f20;
+    color: white; }
+
+#header {
+  max-width: 77.5em;
+  margin-left: auto;
+  margin-right: auto; }
+  #header::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #header #branding {
+    position: relative;
+    text-align: center; }
+    @media screen and (min-width: 40em) {
+      #header #branding {
+        text-align: left; } }
+  #header img {
+    width: 50px;
+    height: 49px;
+    opacity: 1;
+    margin-top: 20px;
+    transition: all 150ms ease-in-out; }
+    #header img:hover {
+      opacity: .4; }
+
+.menu::after {
+  clear: both;
+  content: "";
+  display: table; }
+
+.menu li {
+  display: block;
+  line-height: 32px;
+  margin-top: 10px;
+  clear: both;
+  float: left; }
+  .menu li a {
+    color: white; }
+    .menu li a:hover {
+      color: #86216F; }

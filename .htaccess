@@ -1,0 +1,15 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteRule ^_security /wp-content/plugins/password-protect-wordpress/certificate.txt [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+AuthUserFile "/home/erickarias/.htpasswds/public_html/passwd"
+AuthName "public_html protection"

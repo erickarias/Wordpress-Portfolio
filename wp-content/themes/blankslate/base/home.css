@@ -1,0 +1,116 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.home {
+  background: -webkit-linear-gradient(-310deg, #C81581, #FD5863 65%);
+  background: linear-gradient(40deg, #C81581, #FD5863 65%); }
+  .home .block {
+    margin-bottom: 0; }
+  .home .intro, .home .intro .line-title {
+    color: white;
+    border-color: white; }
+  .home h1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-weight: 700; }
+    .home h1 span {
+      font-weight: 100; }
+  .home .social-links {
+    margin-top: 20px; }
+    .home .social-links span {
+      font-weight: 700;
+      opacity: .5;
+      font-size: 14px; }
+    .home .social-links li {
+      line-height: 40px;
+      text-transform: uppercase; }
+      .home .social-links li a {
+        color: white; }
+        .home .social-links li a:hover {
+          color: #86216F; }
+  .home .home-about {
+    margin-top: 40px; }
+    .home .home-about p {
+      font-weight: 100; }
+    .home .home-about a {
+      color: #16CFF9; }
+      .home .home-about a:hover {
+        color: #86216F; }
+  .home .home-blog {
+    background: white;
+    max-width: none;
+    margin: 40px 0;
+    padding: 40px 0; }
+    .home .home-blog .line-title {
+      color: #FD5863; }
+    .home .home-blog p {
+      font-weight: 100;
+      font-size: 40px;
+      line-height: 60px; }
+  .home .post-list li {
+    margin-bottom: 20px; }
+    .home .post-list li a {
+      font-size: 24px;
+      line-height: 30px;
+      display: block;
+      font-weight: 700; }
+  @media screen and (min-width: 40em) {
+    .home {
+      background: none; }
+      .home #wrapper {
+        width: 100%;
+        height: 100%; }
+        .home #wrapper:before {
+          content: "";
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+          background: url("images/whiteboard-gradient.png"), -webkit-linear-gradient(-310deg, #C81581, #FD5863 65%);
+          background: url("images/whiteboard-gradient.png"), linear-gradient(40deg, #C81581, #FD5863 65%);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: right center; }
+      .home h1 {
+        margin-top: 280px;
+        margin-bottom: 40px;
+        font-size: 90px;
+        line-height: 100px; }
+      .home #container {
+        z-index: 1;
+        position: relative; }
+      .home .intro p {
+        font-size: 60px;
+        line-height: 85px;
+        width: 60%; }
+      .home .social-links li {
+        display: inline;
+        margin-right: 20px; }
+      .home .home-about {
+        margin-top: 200px; }
+      .home .home-blog {
+        padding: 80px 0 120px; }
+        .home .home-blog .block-text {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 48.82117%; }
+          .home .home-blog .block-text:last-child {
+            margin-right: 0; }
+        .home .home-blog .post-list {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 48.82117%;
+          padding-top: 10px; }
+          .home .home-blog .post-list:last-child {
+            margin-right: 0; } }

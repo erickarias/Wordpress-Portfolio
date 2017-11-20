@@ -1,0 +1,409 @@
+@import "../bourbon/bourbon";
+@import "../neat/neat";
+@import 'variables';
+@import 'grid_settings';
+
+body {
+  font-family: helvetica;
+  @include background(linear-gradient(40deg, $hot-pink, $red 65%));
+}
+
+html {
+  margin-top: 0!important;
+}
+
+#wrapper {
+  @include clearfix;
+  padding: 0 $base-spacing;
+  margin: $base-spacing;
+  background-color: white;
+}
+
+.block {
+  @include outer-container;
+  margin-bottom: $base-spacing*2;
+
+  img {
+    margin-bottom: $base-spacing;
+  }
+}
+
+.section {
+  padding-top: $base-spacing*2;
+  @include outer-container;
+}
+
+.no-border {
+  border: 0;
+}
+
+.full-width {
+  position: relative;
+  max-width: none;
+  @include clearfix;
+  width: 100%;
+
+  img {
+    position: absolute;
+  }
+}
+
+.cascaded-half {
+  width: 100%;
+  img {
+      border-color: $red!important;
+  }
+}
+
+.thirds {
+  .block {
+    &:nth-child(2), &:nth-child(3) {
+      margin-bottom: 0;
+    }
+    img {
+      margin-bottom: $base-spacing;
+    }
+  }
+}
+
+@include media($medium-screen-down) {
+  img {
+    width: 100%;
+  }
+}
+
+@include media($medium-screen-up) {
+
+  .basic {
+    .block-text {
+      margin-bottom: $base-spacing*2;
+    }
+  }
+
+  .cascaded-half {
+    margin-top: $base-spacing;
+    .section {
+      padding-left: $base-spacing*4;
+      padding-right: $base-spacing*4;
+      padding-top: $base-spacing;
+    }
+
+    .connect {
+      line-height: 0;
+    }
+
+    .block:first-child {
+      margin: $base-spacing 0 $base-spacing;
+    }
+
+    .section {
+      @include background(linear-gradient(40deg, $hot-pink, $red 65%));
+
+      h2, p {
+        color: white;
+      }
+    }
+  }
+
+  #wrapper {
+    padding: 0;
+  }
+
+  .section {
+    padding: $base-spacing*2 0 $base-spacing;
+  }
+
+  .block {
+    margin-bottom: $base-spacing*2;
+  }
+
+  .col-10 {
+    @include span-columns(10);
+  }
+
+  .col-5 {
+    @include span-columns(5);
+    @include omega(2n);
+  }
+
+  .col-7 {
+    @include span-columns(7);
+  }
+
+  .col-9 {
+    @include span-columns(9);
+  }
+
+  .col-8 {
+    @include span-columns(8);
+  }
+
+  .col-6 {
+    @include span-columns(6);
+    @include omega(3);
+  }
+
+  .col-3 {
+    @include span-columns(3);
+  }
+
+  .col-4 {
+    @include span-columns(4);
+  }
+
+  .col-2 {
+    @include span-columns(2);
+  }
+
+  .shift-1 {
+    @include shift(1);
+  }
+
+  .shift-2 {
+    @include shift(2);
+  }
+
+  .shift-3 {
+    @include shift(3);
+  }
+
+  .shift-4 {
+    @include shift(4);
+  }
+
+  .vertical-align-text {
+    position: relative;
+
+    .block-text {
+      position: absolute;
+      top: 50%;
+      transform: translatey(-50%);
+    }
+  }
+  .single-project {
+    .half {
+      img {
+        @include span-columns(4);
+        float: none;
+      }
+
+      &.block {
+        position: relative;
+      }
+
+      .project-3 & {
+        img {
+          margin-bottom: $base-spacing;
+        }
+      }
+
+      .block-text {
+        @include span-columns(7);
+        position: absolute;
+        @include shift(4);
+        margin-top: $base-spacing;
+      }
+    }
+    
+    .flip {
+      .block-text {
+        @include shift(0);
+        position: static;
+        @include span-columns(7);
+      }
+
+      img {
+        @include shift(8);
+      }
+    }
+  }
+
+
+  .checker {
+    .block-text {
+      @include span-columns(6);
+      position: absolute;
+      top: 50%;
+      transform: translatey(-50%);
+     
+    }
+    
+    img {
+      @include span-columns(5);
+      @include shift(1);
+    }
+
+
+    .block {
+      position: relative;
+      margin-bottom: $base-spacing*2;
+      line-height: 0;
+
+      &:first-child {
+        img {
+          @include shift(7);
+          @include span-columns(5);
+        }
+      }
+
+      &:nth-child(2) {
+        @include shift(2);
+        img {
+          @include span-columns(6);
+          @include shift(0);
+        }
+      }
+      
+      &.flip {
+        .block-text {
+          position: absolute;
+          @include span-columns(6);
+          @include shift(5);
+        }
+
+        &:first-child {
+          img {
+            @include shift(0);
+            @include span-columns(5);
+          }
+        }
+
+        &:nth-child(2) {
+          @include shift(0);
+          img {
+            @include span-columns(5);
+            @include shift(0);
+          }
+        }
+      }
+    }
+
+
+    &.three-checker {
+      margin-bottom: $base-spacing*3;
+
+      .block {
+        img {
+          @include span-columns(4);
+        }
+
+        &:first-child {
+          .block-text {
+            @include shift(4);
+          }
+
+          img {
+            margin-left: 0;
+          }
+        }
+
+        &:nth-child(3) {
+          img {
+            @include shift(8);
+          }
+        }
+
+        &:nth-child(2) {
+          @include shift(0);
+        }
+      }
+    }
+  }
+  // .footer {
+
+  //   .block:first-child {
+  //     margin-right: 0;
+  //     i {
+  //       margin-right: $base-spacing/2;
+  //     }
+  //   }
+
+  //   .block:last-child {
+  //     float: right;
+  //     i {
+  //       margin-left: $base-spacing/2;
+  //     }
+  //   }
+    
+  //   .block:nth-child(2) {
+      
+  //     a {
+      
+  //     }
+  //   }
+  // }
+}
+.footer {
+  border: 0;
+
+  .block{
+    @include span-columns(4);
+    @include omega(3);
+    text-align: center;
+    position: relative;
+
+    a {
+      margin-top: 0;
+      border: 0;
+    }
+  }
+
+  .block:nth-child(2) {
+    a {
+      width: 100%;
+    }
+  }
+
+  .block:first-child {
+    text-align: left;
+    i {
+        margin-right: $base-spacing/2;
+      }
+    a {
+      float: left;
+      width: auto;
+    }
+  }
+
+  .block:nth-child(3) {
+    text-align: right;
+    a {
+      float: right;
+      width: auto;
+    }
+    i {
+      margin-left: $base-spacing/2;
+    }
+  }
+}
+
+@include media($medium-screen-down) {
+  .checker {
+    .block {
+      margin-bottom: 0;
+    }
+
+    .block-text {
+      margin-bottom: $base-spacing*2;
+    }
+  }
+
+  .cascaded-half {
+    h2 {
+      margin-bottom: $base-spacing*2;
+    }
+
+    .block {
+      margin-bottom: 0;
+
+      &:first-child {
+        margin-bottom: $base-spacing*2;
+      }
+    }
+  }
+}
+
+footer #copyright {
+  text-align: center;
+  font-size: 14px;
+}

@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.single-project .brief {
+  padding-top: 20px; }
+  @media screen and (min-width: 40em) {
+    .single-project .brief {
+      padding-top: 40px; }
+      .single-project .brief.block {
+        position: relative; }
+      .single-project .brief img {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%;
+        margin-left: 8.5298%; }
+        .single-project .brief img:last-child {
+          margin-right: 0; }
+      .single-project .brief .block-text {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%;
+        position: absolute;
+        top: 50%;
+        transform: translatey(-50%);
+        margin-left: 42.64902%; }
+        .single-project .brief .block-text:last-child {
+          margin-right: 0; } }

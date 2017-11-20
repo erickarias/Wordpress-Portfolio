@@ -1,0 +1,138 @@
+@import "../bourbon/bourbon";
+@import "../neat/neat";
+@import 'grid_settings';
+@import 'variables';
+
+.single-project {
+  img {
+    width: 100%;
+  }
+
+  .section {
+    @include media($medium-screen-up) {
+      width: calc(100% - 280px);
+      margin-left: $base-spacing*12;
+      margin-right: $base-spacing*2;
+      padding-top: 60px;
+    }
+  
+    &.footer {
+      font-weight: 500;
+    }
+  }
+
+  .block {
+    img {
+      border: 1px solid #e5e5e5;
+    }
+  }
+
+  
+  h1, h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .section.title {
+    h1, p {
+      color: white;
+      text-align: left;
+      margin-bottom: $base-spacing/2;
+      
+      .block-text {
+        width: 100%;
+      }
+    }
+
+    @include background(linear-gradient(40deg, $hot-pink, $red 65%));
+
+    @include media($medium-screen-up) {
+      margin-bottom: $base-spacing;
+      padding-top: $base-spacing*5;
+      height: 700px;
+      background-position: center;
+      position: relative;
+      margin-top: $base-spacing*2;
+
+      .brief {
+        position: absolute;
+        top: 50%;
+        transform: translatey(-50%);
+        padding: 0;
+        left: 0;
+        padding: 0 $base-spacing*5;
+        
+        &.block {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.bcg {
+  .section.title {
+    @include media($medium-screen-up) {
+      background: url("/wp-content/uploads/2017/11/bcg-header.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: 100px top;
+    }
+  }
+}
+
+.ul {
+  .section.title {
+    @include media($medium-screen-up) {
+      background: url("/wp-content/uploads/2017/11/ul-header.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: 200px top;
+    }
+  }
+}
+
+.motorola {
+  .section.title {
+    @include media($medium-screen-up) {
+      background: url("/wp-content/uploads/2017/11/motorola-header.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  }
+}
+
+.fiore {
+  .section.title {
+    @include media($medium-screen-up) {
+      background: url("/wp-content/uploads/2017/11/landscape-header.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  }
+}
+
+.transactency {
+  .section.title {
+    @include media($medium-screen-up) {
+      background: url("/wp-content/uploads/2017/11/contract-header.jpg");
+      background-size: cover;
+      background-position: 100px top;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  }
+}
+
+.topcoin {
+  .section.title {
+    @include media($medium-screen-up) {
+      background: url("/wp-content/uploads/2017/11/cion-header.jpg");
+      background-size: cover;
+      background-position: 100px top;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  }
+}

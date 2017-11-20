@@ -1,0 +1,57 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.swpm-post-not-logged-in-msg {
+  max-width: 77.5em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+  .swpm-post-not-logged-in-msg::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .swpm-post-not-logged-in-msg .swpm-login-link {
+    width: 160px;
+    margin: 0 auto; }
+  .swpm-post-not-logged-in-msg div {
+    margin-top: 20px; }
+
+.login .entry-content {
+  max-width: 77.5em;
+  margin-left: auto;
+  margin-right: auto; }
+  .login .entry-content::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .login .entry-content .swpm-login-widget-form label {
+    margin-bottom: 10px;
+    display: inline-block; }
+  @media screen and (min-width: 40em) {
+    .login .entry-content .swpm-login-widget-form {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      margin-right: 0;
+      margin: 0 auto;
+      float: none; }
+      .login .entry-content .swpm-login-widget-form:last-child {
+        margin-right: 0; } }
+  .login .entry-content .swpm-login-widget-form input[type=text], .login .entry-content .swpm-login-widget-form .swpm-password-field {
+    width: 100%;
+    font-size: 18px;
+    padding: 0 5px;
+    margin-bottom: 10px; }
+  .login .entry-content .swpm-login-widget-form .swpm-password-field {
+    height: 40px;
+    border: 3px solid #231f20; }

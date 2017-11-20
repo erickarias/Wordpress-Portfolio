@@ -1,0 +1,371 @@
+@import "../bourbon/bourbon";
+@import "../neat/neat";
+@import 'grid_settings';
+@import 'variables';
+
+.home {
+  background: none;
+  .block {
+    margin-bottom: 0;
+  }
+
+  #header {
+    #branding {
+      position: relative;
+      left: -20px;
+      img {
+        opacity: .5;
+      }
+
+      .logo-white {
+        display: block;
+      }
+
+      .logo-color {
+        display: none;
+      }
+    }
+  }
+
+  .menu {
+    li {
+      a {
+        color: white;
+
+        &:hover {
+          color: $hover;
+        }
+      }
+    }
+  }
+
+  .intro, .intro .line-title {
+    color: white;
+    border-color: white;
+  }
+
+  h1 {
+    margin-top: $base-spacing*2;
+    margin-bottom: $base-spacing*2;
+    font-weight: 700;
+    color: white;
+    span {
+      font-weight: 100;
+    }
+  }
+
+
+  p {
+    font-weight: 300;
+    margin-bottom: $base-spacing*2;
+  }
+
+  .social-links {
+    margin-top: $base-spacing;
+
+    span {
+      font-weight: 700;
+      opacity: .5;
+      font-size: 14px;
+    }
+
+    li {
+      line-height: 40px;
+      text-transform: uppercase;
+
+      a {
+        color: white;
+        display: inline-block;
+
+        &:hover {
+          color: $hover;
+        }
+      }
+    }
+  }
+
+  .home-about {
+    margin-top: $base-spacing*2;
+
+    a {
+      color: $dark-purple;
+
+      &:hover {
+        color: $hover;
+      }
+    }
+
+    p {
+      font-weight: 300;
+      margin-bottom: $base-spacing*2;
+    }
+  }
+
+  .home-blog {
+    background: white;
+    max-width: none;
+    padding: $base-spacing*2 0;
+
+    .line-title {
+      color: $red;
+    }
+    
+    p {
+      font-weight: 500; 
+     color: lighten($font-color, 25%);
+    }
+
+    img {
+      border: 1px solid #e5e5e5;
+    }
+  }
+
+  .post-list {
+    padding-top: $base-spacing;
+    li {
+      margin-bottom: $base-spacing;
+      
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      a {
+        font-size: 24px;
+        line-height: 30px;
+        display: block;
+        font-weight: 700;
+        color: $dark-purple;
+        margin-bottom: 10px;
+        &:hover {
+          color: $hover;
+        }
+      }
+      &:last-child {
+        a {
+          font-size: 20px;
+          color: $dark-purple;
+          font-weight: 300;
+
+          &:hover {
+            color: $hover;
+          }
+        }
+      }
+    }
+  }
+
+  .home-photos {
+    color: white;
+    padding-top: $base-spacing*2;
+
+    .line-title {
+      color: white;
+      border-color: white;
+    }
+
+    p {
+      font-weight: 300;
+    }
+
+    a {
+      font-size: 20px;
+      font-weight: 300;
+      color: white;
+
+      &:hover {
+        color: $hover;
+      }
+    }
+  }
+  @include media($medium-screen-down) {
+    
+    #wrapper {
+      width: 100%;
+      background: white;
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      margin-top: 0;
+    }
+
+    .block {
+      padding: $base-spacing;
+    }
+
+    #header #branding {
+      top: 0;
+      padding: 0 $base-spacing;
+      @include background($red);
+    }
+
+    h1 {
+      margin-top: 0;
+      padding-top: $base-spacing*2;
+    }
+
+    .intro, .home-photos {
+      @include background(linear-gradient(40deg, $hot-pink, $red 65%));
+    }
+
+    .home-photos {
+      a {
+        color: white;
+      }
+    }
+  }
+
+  @include media($medium-screen-up) {
+    background: none;
+
+    .block {
+      max-width: 80.5em;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    #wrapper {
+      width: 100%;
+      margin: 0;
+
+      &:before {
+        content:"";
+        position: fixed;
+        width: calc(100% - 40px);
+        left: 20px;
+        height: 100%;
+        z-index: 0;
+        @include background(url("/wp-content/uploads/2017/11/whiteboard-gradient-2.png"), linear-gradient(40deg, $hot-pink, $red 65%));
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right top;
+      }
+
+      &:after {
+        content: "";
+        height: 20px;
+        width: 100%;
+        position: absolute;
+        background-color: white;
+        top: 0;
+        z-index: 1;
+      }
+    }
+
+    h1 {
+      margin-top: $base-spacing*14;
+      margin-bottom: $base-spacing*2;
+      font-size: 90px;
+      line-height: 95px;
+    }
+
+    #container {
+      z-index: 1;
+      position: relative;
+    }
+
+    .intro {
+      p {
+        font-size: 50px;
+        line-height: 80px;
+        width: 60%;
+      }
+    }
+
+    .social-links {
+      li {
+        display: inline;
+        margin-right: $base-spacing;
+      }
+    }
+
+    .home-about {
+      margin-top: $base-spacing*14;
+
+      p {
+        font-weight: 700;
+      }
+    }
+
+    .home-blog {
+      padding: $base-spacing*5 0;
+      margin-top: $base-spacing*5;
+
+      p {
+        font-size: 50px;
+        line-height: 60px;
+        font-weight: 700;
+      }
+
+      .block-text {
+        @include span-columns(8);
+        padding-right: $base-spacing*2;
+      }
+
+      .line-title {
+        margin: $base-spacing 0;
+      }
+
+      .post-list {
+        margin-top: $base-spacing*2;
+        @include span-columns(12);
+        
+
+        li {
+          @include span-columns(4);
+          @include omega(3);
+           
+           &:first-child, &:nth-child(3), &:nth-child(2){
+            a {
+              font-size: 28px;
+              line-height: 40px;
+            }
+          }
+
+          &:last-child {
+            margin-top: $base-spacing*2;
+            @include span-columns(12);
+          }
+        }
+      }
+    }
+
+    .home-photos {
+      padding-top: $base-spacing*4;  
+
+      p {
+        font-size: 50px;
+        line-height: 60px;
+        font-weight: 700;
+      }
+
+      .block-text {
+        @include span-columns(7);
+        margin-bottom: $base-spacing*2;
+
+        a {
+          font-size: 16px;
+          color: white;
+
+          &:hover {
+            color: $hover;
+          }
+        }
+      }
+    }
+
+    .grid {
+      display: block;
+    }
+    .grid-item { 
+      width: 428px; 
+      padding: 0 20px 20px 0;
+      img {
+        width: 100%;
+      }
+    }
+    .grid-item--width2 { width: 400px; }
+  }
+}
