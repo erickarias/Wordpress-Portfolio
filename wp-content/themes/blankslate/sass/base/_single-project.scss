@@ -4,6 +4,9 @@
 @import 'variables';
 
 .single-project {
+  @include media($medium-screen-up) {
+    min-width: 1024px;
+  }
   img {
     width: 100%;
   }
@@ -35,10 +38,11 @@
   }
 
   .section.title {
+    padding: $base-spacing*2 $base-spacing*2 0;
+    margin-top: $base-spacing*2;
     h1, p {
       color: white;
       text-align: left;
-      margin-bottom: $base-spacing/2;
       
       .block-text {
         width: 100%;
@@ -49,11 +53,10 @@
 
     @include media($medium-screen-up) {
       margin-bottom: $base-spacing;
-      padding-top: $base-spacing*5;
+      padding: $base-spacing*5 0 0;
       height: 700px;
       background-position: center;
       position: relative;
-      margin-top: $base-spacing*2;
 
       .brief {
         position: absolute;
@@ -78,6 +81,7 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-position: 100px top;
+      background-size: cover;
     }
   }
 }
@@ -89,6 +93,7 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-position: 200px top;
+      background-size: cover;
     }
   }
 }
@@ -99,6 +104,7 @@
       background: url("/wp-content/uploads/2017/11/motorola-header.jpg");
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
     }
   }
 }
@@ -109,6 +115,7 @@
       background: url("/wp-content/uploads/2017/11/landscape-header.jpg");
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
     }
   }
 }
@@ -131,6 +138,18 @@
       background: url("/wp-content/uploads/2017/11/cion-header.jpg");
       background-size: cover;
       background-position: 100px top;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  }
+}
+
+.uofc {
+  .section.title {
+    @include media($medium-screen-up) {
+      background: url("/wp-content/uploads/2017/11/uofc-header.jpg");
+      background-size: cover;
+      background-position: 260px top;
       background-repeat: no-repeat;
       background-attachment: fixed;
     }

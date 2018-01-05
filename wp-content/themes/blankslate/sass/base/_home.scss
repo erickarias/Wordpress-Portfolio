@@ -12,7 +12,7 @@
   #header {
     #branding {
       position: relative;
-      left: -20px;
+      left: 0;
       img {
         opacity: .5;
       }
@@ -31,6 +31,7 @@
     li {
       a {
         color: white;
+        font-weight: 500;
 
         &:hover {
           color: $hover;
@@ -72,6 +73,7 @@
     li {
       line-height: 40px;
       text-transform: uppercase;
+      font-weight: 500;
 
       a {
         color: white;
@@ -106,17 +108,29 @@
     max-width: none;
     padding: $base-spacing*2 0;
 
-    .line-title {
+    h2 {
       color: $red;
     }
-    
-    p {
-      font-weight: 500; 
-     color: lighten($font-color, 25%);
-    }
 
-    img {
-      border: 1px solid #e5e5e5;
+    .block-article {
+      a {
+        font-size: 28px;
+        line-height: 40px;
+        font-weight: 700;
+        color: $dark-purple;
+
+        &:hover {
+          color: $hover;
+        }
+      }
+
+      img {
+        border: 1px solid #e5e5e5;
+      }
+
+      span {
+        line-height: 28px;
+      }
     }
   }
 
@@ -218,7 +232,7 @@
   @include media($medium-screen-up) {
     background: none;
 
-    .block {
+    .block, #header {
       max-width: 80.5em;
     }
 
@@ -229,6 +243,7 @@
     #wrapper {
       width: 100%;
       margin: 0;
+      padding: 0 20px;
 
       &:before {
         content:"";
@@ -250,6 +265,7 @@
         position: absolute;
         background-color: white;
         top: 0;
+        left: 0;
         z-index: 1;
       }
     }
@@ -293,42 +309,8 @@
       padding: $base-spacing*5 0;
       margin-top: $base-spacing*5;
 
-      p {
-        font-size: 50px;
-        line-height: 60px;
-        font-weight: 700;
-      }
-
-      .block-text {
-        @include span-columns(8);
-        padding-right: $base-spacing*2;
-      }
-
-      .line-title {
-        margin: $base-spacing 0;
-      }
-
-      .post-list {
-        margin-top: $base-spacing*2;
-        @include span-columns(12);
-        
-
-        li {
-          @include span-columns(4);
-          @include omega(3);
-           
-           &:first-child, &:nth-child(3), &:nth-child(2){
-            a {
-              font-size: 28px;
-              line-height: 40px;
-            }
-          }
-
-          &:last-child {
-            margin-top: $base-spacing*2;
-            @include span-columns(12);
-          }
-        }
+      .block {
+        margin-bottom: $base-spacing*2;
       }
     }
 
@@ -337,16 +319,23 @@
 
       p {
         font-size: 50px;
-        line-height: 60px;
+        line-height: 70px;
         font-weight: 700;
       }
 
       .block-text {
-        @include span-columns(7);
         margin-bottom: $base-spacing*2;
+        @include clearfix;
+
+        h2 {
+          
+          @include span-columns(7);
+        }
+        p {
+          @include span-columns(7);
+        }
 
         a {
-          font-size: 16px;
           color: white;
 
           &:hover {
@@ -358,6 +347,8 @@
 
     .grid {
       display: block;
+      
+      
     }
     .grid-item { 
       width: 428px; 

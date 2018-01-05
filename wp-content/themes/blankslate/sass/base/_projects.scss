@@ -15,6 +15,16 @@ body.projects {
     max-width: none;
   }
 
+  label {
+    color: $font-color;
+    font-size: 14px;
+    margin-right: $base-spacing;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
   @include media($medium-screen-up) {
     h2 {
       margin-bottom: $base-spacing/2;
@@ -26,13 +36,13 @@ body.projects {
     }
 
     .block {
-      max-width: 800px;
-      width: 100%;
+      width: calc(100% - 300px);
       margin-left: $base-spacing*14;
       margin-right: $base-spacing*24;
 
 
       &:first-child {
+        max-width: 700px;
         margin-bottom: 0;
       }
     }
@@ -77,16 +87,9 @@ body.projects {
         }
 
         h3 {
-          margin: 0;
           font-size: 28px;
           font-weight: 700;
           line-height: 35px;
-        }
-
-        label {
-          color: $font-color;
-          font-size: 14px;
-          margin-right: $base-spacing;
         }
       }
       // &:nth-child(3) {

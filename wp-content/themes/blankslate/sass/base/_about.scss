@@ -21,16 +21,11 @@
       width: 100%;
     }
 
-    .block-img {
-      @include span-columns(4);
-    }
-
     &.block {
       position: relative;
     }
 
     .block-text {
-      @include span-columns(7);
       margin-top: $base-spacing;
     }
   }
@@ -39,7 +34,6 @@
     .block-text {
       @include shift(0);
       position: static;
-      @include span-columns(7);
       margin-top: 0;
     }
   }
@@ -62,8 +56,13 @@
 
     .block {
       margin-bottom: $base-spacing*2;
+      .block-img {
+        @include span-columns(4);
+      }
+
       .block-text {
         padding-right: $base-spacing*2;
+        @include span-columns(7);
       }
       a {
       }

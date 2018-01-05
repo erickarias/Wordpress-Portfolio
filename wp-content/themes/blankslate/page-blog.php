@@ -40,8 +40,9 @@
 		<?php wp_reset_postdata(); ?>
 
 	</div>
+	<div class="section no-border">
 	<nav id="nav-posts">
 		<div class="prev"><?php next_posts_link('&laquo; Previous Posts'); ?></div>
 	</nav>
-
+	</div>
 <?php get_footer(); ?>

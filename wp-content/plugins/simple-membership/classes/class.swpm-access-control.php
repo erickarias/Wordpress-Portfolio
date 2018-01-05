@@ -44,7 +44,7 @@ class SwpmAccessControl {
         //Check if the user is logged in.
         if(!$auth->is_logged_in()){
             //This user is not logged into the site. No access to this protected post.
-            $text = SwpmUtils::_('Email <a href="mailto:iam@erickarias.com">iam@erickarias.com</a> to request access. Or') . SwpmMiscUtils::get_login_link();
+            $text = SwpmUtils::_('Email <a href="mailto:erick@erickarias.com">erick@erickarias.com</a> to request access. Or') . SwpmMiscUtils::get_login_link();
             $error_msg = '<div class="swpm-post-not-logged-in-msg section no-border"><h1>Whoops! This is a protected area.</h1><p>'.$text.'</p></div>';
             $this->lastError = apply_filters('swpm_not_logged_in_post_msg', $error_msg);
             return false;            
